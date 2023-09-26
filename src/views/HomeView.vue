@@ -1,18 +1,25 @@
 <template>
-  <div class="home">
-    <img alt="Vue logo" src="../assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+<div id="home" class="container-fluid m2-vr">
+  <div class="col-9 col-md-12 col-lg-11 wrapper">
+    <h1>Home </h1>
   </div>
+
+  <sidebar/>
+</div>
 </template>
 
 <script>
-// @ is an alias to /src
-import HelloWorld from '@/components/HelloWorld.vue'
+import sidebar from '@/components/sidebar.vue';
 
 export default {
   name: 'HomeView',
   components: {
-    HelloWorld
+    sidebar,
   }
 }
 </script>
+<style scoped>
+#home{
+  align-items: flex start;
+}
+</style>
