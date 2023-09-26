@@ -1,11 +1,21 @@
 <template>
-  <header class="wrapper">
-    <h1>Blog 1</h1>
-    <nav>
-      <router-link class="m2-vr" to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
+  <section class="wrapper">
+    <header class="container-fluid cen-text">
+      <div class="col-4">
+        <p>ورود کاربر/ثبت نام</p>
+      </div>
+      <div class="col-4 col-lg-5 col-md-12">
+        <h1>Blog 1</h1>
+     </div>
+      <div class="col-4 col-lg-7 col-md-12">
+        SEARCH PARAMETERS
+      </div>
+    </header><br>
+
+    <nav class="">
+      <pre>Menu   Menu   Menu   Menu   Menu</pre>
     </nav>
-  </header>
+  </section>  
   
   <section id="view" class="container-fluid">
     <router-view/>
