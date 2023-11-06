@@ -19,6 +19,11 @@ const routes = [
     path: '/post',
     name: 'post',
     component: () => import(/* webpackChunkName: "about" */ '../views/Post.vue')
+  },
+  {
+    path: '/authenticate',
+    name: 'authenticate',
+    component: () => import('../views/Login.vue')
   }
 ]
 

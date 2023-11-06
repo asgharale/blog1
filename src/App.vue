@@ -1,19 +1,41 @@
 <template>
   <section class="wrapper">
-    <header class="container-fluid cen-text">
-      <div class="col-4">
-        <p>ورود کاربر/ثبت نام</p>
+    <header class="container-fluid cen-text p4-vr">
+      <div id="authopt" class="col-4">
+        <router-link to="/authenticate">ورود / ثبت نام</router-link>
       </div>
-      <div class="col-4 col-lg-5 col-md-12">
-        <h1>Blog 1</h1>
+      <div id="brand" class="col-4 col-lg-5 col-md-12">
+        <router-link to="/"><h1>وبلاگ1</h1></router-link>
      </div>
-      <div class="col-4 col-lg-7 col-md-12">
-        SEARCH PARAMETERS
+      <div id="searchbar" class="col-4 col-lg-7 col-md-12">
+        <form>
+          <input type="text" placeholder="جستجو..." name="search">
+          <button>search</button>
+        </form>
       </div>
-    </header><br>
+    </header>
 
-    <nav class="">
-      <pre>Menu   Menu   Menu   Menu   Menu</pre>
+    <nav id="navbar" class="p1-hr p3-vr">
+      <ul>
+        <li>تکنولوژی</li>
+        <li>پزشکی</li>
+        <li>بازار خودرو</li>
+        <li>تحقیقات</li>
+        <li>سیاسی</li>
+        <li>اقتصادی</li>
+        <li>تکنولوژی</li>
+        <li>پزشکی</li>
+        <li>بازار خودرو</li>
+        <li>تحقیقات</li>
+        <li>سیاسی</li>
+        <li>اقتصادی</li>
+        <li>تکنولوژی</li>
+        <li>پزشکی</li>
+        <li>بازار خودرو</li>
+        <li>تحقیقات</li>
+        <li>سیاسی</li>
+        <li>اقتصادی</li>
+      </ul>
     </nav>
   </section>  
   
@@ -42,6 +64,20 @@
 
 <style scoped lang="scss">
 @import './assets/variables.scss';
+
+#navbar > ul{
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  white-space: nowrap;
+  overflow-x: auto;
+}
+#navbar > ul > li{
+  display: inline;
+  float: none;
+  padding: $s1;
+  margin: 0 $s1;
+}
 #foot{
   background-color: #2d2d2d;
   color: $lgray-color;
@@ -55,7 +91,21 @@
   direction: ltr;
   line-height: 2rem;
 }
+@media (min-width: $lg) {
+  #navbar > ul > li{
+    margin: 0 $s2!important;
+  }
+}
 @media (max-width: $lg) {
+  #brand{
+    order: 1;
+  }
+  #authopt{
+    order: 2;
+  }
+  #searchbar{
+    order: 3;
+  }
   #with-love, .copy-r{
     text-align: center;
     margin-block: 4px;
