@@ -5,4 +5,5 @@ import store from './store'
 import './assets/base.scss';
 import './assets/response.scss';
 
+
 createApp(App).use(store).use(router).mount('#app')

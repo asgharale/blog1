@@ -6,11 +6,15 @@
       </div>
       <div id="brand" class="col-4 col-lg-5 col-md-12">
         <router-link to="/"><h1>وبلاگ1</h1></router-link>
+        <br>
+        <p>خبری باشد خبرتان میکنیم.</p>
      </div>
-      <div id="searchbar" class="col-4 col-lg-7 col-md-12">
+      <div class="col-4 col-lg-7 col-md-12">
         <form>
-          <input type="text" placeholder="جستجو..." name="search">
-          <button>search</button>
+          <div id="searchbar">
+            <input type="text" placeholder="جستجو..." name="search">
+            <button><img class="iconsvg" src="./assets/icons/icsearch.svg"></button>
+          </div>
         </form>
       </div>
     </header>
@@ -64,6 +68,30 @@
 
 <style scoped lang="scss">
 @import './assets/variables.scss';
+
+
+#searchbar{
+  border-radius: 25px;
+  height: 25px;
+  border: 2px solid gray;
+  display: inline-block;
+}
+#searchbar > *{
+  border: none;
+  background-color: inherit;
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  vertical-align: middle;
+  background: inherit;
+}
+#searchbar > button:hover{
+  background-color: white;
+}
+#searchbar > button:active{
+  background-color: whitesmoke;
+}
+
 
 #navbar > ul{
   list-style-type: none;
