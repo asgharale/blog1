@@ -12,63 +12,6 @@
             <a href="#">مقاله ۵</a>
         </div>
     </div>
-
-    <div class="side-topic wrapper">
-        <p class="side-title p1-hr">
-            <b>آخرین مطالب</b>
-        </p>
-        <div class="p1">
-            <a href="#">مقاله ۱</a><br>
-            <a href="#">مقاله ۲</a><br>
-            <a href="#">مقاله ۳</a><br>
-            <a href="#">مقاله ۴</a><br>
-            <a href="#">مقاله ۵</a>
-        </div>
-    </div>    <div class="side-topic wrapper">
-        <p class="side-title p1-hr">
-            <b>آخرین مطالب</b>
-        </p>
-        <div class="p1">
-            <a href="#">مقاله ۱</a><br>
-            <a href="#">مقاله ۲</a><br>
-            <a href="#">مقاله ۳</a><br>
-            <a href="#">مقاله ۴</a><br>
-            <a href="#">مقاله ۵</a>
-        </div>
-    </div>    <div class="side-topic wrapper">
-        <p class="side-title p1-hr">
-            <b>آخرین مطالب</b>
-        </p>
-        <div class="p1">
-            <a href="#">مقاله ۱</a><br>
-            <a href="#">مقاله ۲</a><br>
-            <a href="#">مقاله ۳</a><br>
-            <a href="#">مقاله ۴</a><br>
-            <a href="#">مقاله ۵</a>
-        </div>
-    </div>    <div class="side-topic wrapper">
-        <p class="side-title p1-hr">
-            <b>آخرین مطالب</b>
-        </p>
-        <div class="p1">
-            <a href="#">مقاله ۱</a><br>
-            <a href="#">مقاله ۲</a><br>
-            <a href="#">مقاله ۳</a><br>
-            <a href="#">مقاله ۴</a><br>
-            <a href="#">مقاله ۵</a>
-        </div>
-    </div>    <div class="side-topic wrapper">
-        <p class="side-title p1-hr">
-            <b>آخرین مطالب</b>
-        </p>
-        <div class="p1">
-            <a href="#">مقاله ۱</a><br>
-            <a href="#">مقاله ۲</a><br>
-            <a href="#">مقاله ۳</a><br>
-            <a href="#">مقاله ۴</a><br>
-            <a href="#">مقاله ۵</a>
-        </div>
-    </div>
 </aside>
 </template>
 
