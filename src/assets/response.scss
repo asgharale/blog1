@@ -1,5 +1,26 @@
 @import './variables.scss';
 
+.container-fluid{
+    display: flex;
+    flex-flow: row wrap;
+    align-items: flex-start;
+    width: 100%;
+    justify-content: space-evenly;
+}
+.col-1{flex-basis: 8.333%;}
+.col-2{flex-basis: 16.666%;}
+.col-3{flex-basis: 24%;}
+.col-4{flex-basis: 33.333%;}
+.col-5{flex-basis: 41.666%;}
+.col-6{flex-basis: 50%;}
+.col-7{flex-basis: 58.333%;}
+.col-8{flex-basis: 66.666%;}
+.col-9{flex-basis: 75%;}
+.col-10{flex-basis: 83.333%;}
+.col-11{flex-basis: 91.666%;}
+.col-12{flex-basis: 100%;}
+
+
 // X-Small devices (portrait phones, less than 576px)
 @media (max-width: $sm) {
     .col-sm-1{flex-basis: 8.333%!important;}

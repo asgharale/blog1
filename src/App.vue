@@ -1,23 +1,25 @@
 <template>
   <section id="header" class="wrapper">
     <header class="container-fluid cen-text p4-vr">
-      <div id="authopt" class="col-4">
-        <router-link to="/authenticate">ورود / ثبت نام</router-link>
+      <div id="authopt" class="col-4 col-lg-1">
+        <router-link to="/authenticate">
+          <span>IC</span>
+          <span class="nico">ورود / ثبت نام</span>
+        </router-link>
       </div>
-      <div id="brand" class="col-4 col-lg-5 col-md-12">
+      <div id="brand" class="col-4 col-md-12">
         <router-link to="/"><h1>وبلاگ1</h1></router-link>
         <p>ساب تایتل وبسایت بلاگ1</p>
      </div>
 
 
-     <div class="col-4 col-lg-7 col-md-12">
-        <div class="searchbar">
-          <div class="searchicon" @click="searchBtn()"></div>
+     <div class="col-4 col-lg-7 col-md-12" id="searchbar">
+        <form class="searchbar active p3-hr" action="search/">
           <div class="input">
-            <input type="text" placeholder="جستجو..." name="search" id="searchfield">
+            <input type="text" placeholder="جستجو..." name="q" id="searchfield">
           </div>
-          <span class="searchcls" onclick="document.getElementById('searchfield').value = ''"></span>
-        </div>
+          <button class="searchicon"></button>
+        </form>
       </div>
     </header>
 
@@ -55,7 +57,9 @@
   <footer id="foot" class="p3">
     <div class="container-fluid cen-text">
       <!-- site data -->
-      <div style="background-color: pink;" class="col-3">1</div>
+      <div style="background-color: pink;" class="col-3">
+        <router-link to="/about">درباره</router-link>
+      </div>
       <!-- site content -->
       <div style="background-color: purple;" class="col-3">2</div>
       <!-- picture and contact form -->
@@ -102,7 +106,7 @@ header.container-fluid{
 
 .searchbar{
   position: relative;
-  width: 48px;
+  width: 360px;
   height: 48px;
   background-color: whitesmoke;
   border-radius: 48px;
@@ -113,7 +117,7 @@ header.container-fluid{
 .searchbar .searchicon{
   position: absolute;
   top: 0;
-  right: 0;
+  left: 0;
   width: 48px;
   height: 48px;
   border-radius: 48px;
@@ -122,8 +126,16 @@ header.container-fluid{
   justify-content: center;
   align-items: center;
   z-index: 1000;
+  background-color: inherit;
+  box-shadow: none;
+  border: none;
 }
-
+.searchbar .searchicon:hover{
+  background-color: #ebe9e9;
+}
+.searchbar .searchicon:focus{
+  background-color: $lpri-color;
+}
 // searchicon
 .searchbar .searchicon::before{
   content: '';
@@ -144,14 +156,10 @@ header.container-fluid{
   border-radius: 1rem;
 }
 
-.searchbar.active{
-  width: 360px;
-}
 .searchbar .input{
   position: relative;
   width: 312px;
   height: 48px;
-  right: 48px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -159,43 +167,13 @@ header.container-fluid{
 .searchbar .input input{
   position: absolute;
   top: 0;
+  left:0;
   width: 100%;
   height: 100%;
   border: none;
   outline: none;
   background-color: whitesmoke;
   font-size: 16px;
-}
-.searchbar .searchcls{
-  position: absolute;
-  top: 50%;
-  left: 10px;
-  transform: translateY(-50%);
-  width: 15px;
-  height: 15px;
-  cursor: pointer;
-  display: none;
-  justify-content: center;
-  align-items: center;
-}
-.searchbar.active .searchcls{
-  display: flex;
-}
-.searchbar .searchcls::before{
-  position: absolute;
-  content: '';
-  width: 1px;
-  height: 15px;
-  background-color: dimgray;
-  transform: rotate(45deg);
-}
-.searchbar .searchcls::after{
-  position: absolute;
-  content: '';
-  width: 1px;
-  height: 15px;
-  background-color: dimgray;
-  transform: rotate(315deg);
 }
 
 
@@ -230,14 +208,21 @@ header.container-fluid{
   }
 }
 @media (max-width: $lg) {
+  header.container-fluid{
+    justify-content: space-between;
+  }
   #brand{
-    order: 1;
+    order: 0;
   }
   #authopt{
-    order: 2;
+    order: 1;
+  }
+  #authopt > .nico{
+    display: block;
+    background-color: red;
   }
   #searchbar{
-    order: 3;
+    order: 2;
   }
   #with-love, .copy-r{
     text-align: center;
