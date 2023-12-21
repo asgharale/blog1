@@ -1,5 +1,5 @@
 <template>
-<aside id="sidebar" class="col-2 col-lg-11 col-md-12 p3-hr">
+<aside id="sidebar" class="col-2 col-xl-3 col-lg-11 col-md-12">
     <div class="side-topic wrapper">
         <p class="side-title p1-hr">
             <b>آخرین مطالب</b>
@@ -31,7 +31,7 @@ export default{
     box-sizing: border-box;
     border: solid 1px $lgray-color;
     border-radius: 1px;
-    margin-bottom: .5rem;
+    margin-bottom: 0.5rem;
 }
 .side-title{
     background-color: $lpri-color;
@@ -40,9 +40,14 @@ export default{
     line-height: 35px;
     font-size: 17px;
 }
-@media (max-width: $lg){
+@media only screen and (max-width: $lg){
     #sidebar{
         margin-block: 1rem;;
+    }
+}
+@media only screen and (max-width: $xl) and (min-width: $lg){
+    #sidebar > *, .side_topic{
+        margin-right: $s3!important;
     }
 }
 </style>

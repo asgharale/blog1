@@ -57,13 +57,13 @@
   <footer id="foot" class="p3">
     <div class="container-fluid cen-text">
       <!-- site data -->
-      <div style="background-color: pink;" class="col-3">
+      <div style="background-color: pink;" class="col-3 col-lg-5 col-md-6 m1-vr">
         <router-link to="/about">درباره</router-link>
       </div>
       <!-- site content -->
-      <div style="background-color: purple;" class="col-3">2</div>
+      <div style="background-color: purple;" class="col-3 col-lg-5 col-md-6 m1-vr">2</div>
       <!-- picture and contact form -->
-      <div style="background-color: orange;" class="col-6">3</div>
+      <div style="background-color: orange;" class="col-6 col-lg-12 m1-vr">3</div>
     </div>
     <hr>
     <div class="container-fluid p2-vr">
@@ -202,12 +202,12 @@ header.container-fluid{
   direction: ltr;
   line-height: 2rem;
 }
-@media (min-width: $lg) {
+@media only screen and (min-width: $lg) {
   #navbar > ul > li{
     margin: 0 $s2!important;
   }
 }
-@media (max-width: $lg) {
+@media only screen and (max-width: $lg) {
   header.container-fluid{
     justify-content: space-between;
   }
