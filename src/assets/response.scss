@@ -35,6 +35,10 @@
     .col-sm-10{flex-basis: 83.333%!important;}
     .col-sm-11{flex-basis: 91.666%!important;}
     .col-sm-12{flex-basis: 100%!important;}
+
+    // HIDE & SHOW
+    .sm-hide{display: none;}
+    .sm-show{display: block;}
 }
 
 // Small devices (landscape phones, less than 768px)
@@ -51,6 +55,10 @@
     .col-md-10{flex-basis: 83.333%!important;}
     .col-md-11{flex-basis: 91.666%!important;}
     .col-md-12{flex-basis: 100%!important;}
+
+    // HIDE & SHOW
+    .md-hide{display: none;}
+    .md-show{display: block;}
 }
 
 // Medium devices (tablets, less than 992px)
@@ -67,6 +75,10 @@
     .col-lg-10{flex-basis: 83.333%;}
     .col-lg-11{flex-basis: 91.666%;}
     .col-lg-12{flex-basis: 100%;}
+
+    // HIDE & SHOW
+    .lg-hide{display: none;}
+    .lg-show{display: block;}
 }
 
 // Large devices (desktops, less than 1200px)
@@ -83,6 +95,10 @@
     .col-xl-10{flex-basis: 83.333%;}
     .col-xl-11{flex-basis: 91.666%;}
     .col-xl-12{flex-basis: 100%;}
+
+    // HIDE & SHOW
+    .xl-hide{display: none;}
+    .xl-show{display: block;}
 }
 
 // X-Large devices (large desktops, less than 1400px)
@@ -99,4 +115,8 @@
     .col-xxl-10{flex-basis: 83.333%;}
     .col-xxl-11{flex-basis: 91.666%;}
     .col-xxl-12{flex-basis: 100%;}
+
+    // HIDE & SHOW
+    .xxl-hide{display: none;}
+    .xxl-show{display: block;}
 }

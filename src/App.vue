@@ -4,22 +4,22 @@
       <div id="authopt" class="col-4 col-lg-1">
         <router-link to="/authenticate">
           <span>IC</span>
-          <span class="nico">ورود / ثبت نام</span>
+          <span class="lg-hide">ورود / ثبت نام</span>
         </router-link>
       </div>
       <div id="brand" class="col-4 col-md-12">
-        <router-link to="/"><h1>وبلاگ1</h1></router-link>
-        <p>ساب تایتل وبسایت بلاگ1</p>
+        <router-link id="brand-title" to="/"><h1 class="p3-vr">وبلاگ1</h1></router-link>
+        <p class="sub_title">ساب تایتل وبسایت بلاگ1</p>
      </div>
 
 
      <div class="col-4 col-lg-7 col-md-12" id="searchbar">
-        <form class="searchbar active p3-hr" action="search/">
-          <div class="input">
-            <input type="text" placeholder="جستجو..." name="q" id="searchfield">
-          </div>
-          <button class="searchicon"></button>
-        </form>
+        <div class="search-container">
+          <form>
+            <input  type="text" placeholder="Search.." name="search">
+            <button  type="submit"><img width="" src="./assets/icons/icsearch.svg"></button>
+          </form>
+        </div>
       </div>
     </header>
 
@@ -91,89 +91,56 @@
 @import './assets/variables.scss';
 
 
-// some css to make flex boxes be fully with each other
 #header{
-  background-color: $lpri-color;
   vertical-align: middle;
+}
+#header > header{
+  background-color: $lpri-color;
+}
+#header > #navbar{
+  background-color: pink;
 }
 #header > header > *{
   vertical-align: middle;
 }
-
 header.container-fluid{
   align-items: center;
 }
 
-.searchbar{
-  position: relative;
-  width: 360px;
-  height: 48px;
-  background-color: whitesmoke;
-  border-radius: 48px;
-  transition: 0.5;
-  box-shadow: 0 0 0 2px white;
-  overflow: hidden;
-}
-.searchbar .searchicon{
-  position: absolute;
+// STICKY NAV
+header.sticky{
+  position: fixed;
   top: 0;
-  left: 0;
-  width: 48px;
-  height: 48px;
-  border-radius: 48px;
-  cursor: pointer;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  z-index: 1000;
-  background-color: inherit;
-  box-shadow: none;
-  border: none;
-}
-.searchbar .searchicon:hover{
-  background-color: #ebe9e9;
-}
-.searchbar .searchicon:focus{
-  background-color: $lpri-color;
-}
-// searchicon
-.searchbar .searchicon::before{
-  content: '';
-  position: absolute;
-  width: 15px;
-  height: 15px;
-  border: 2.5px solid dimgray;
-  border-radius: 50%;
-  transform: translate(-4px,-4px);
-}
-.searchbar .searchicon::after{
-  content: '';
-  position: absolute;
-  width: 2px;
-  height: 10px;
-  background-color: dimgray;
-  transform: translate(6px,6px) rotate(315deg);
-  border-radius: 1rem;
+  width: 100%;
+  padding: 0!important;
+  margin: 0!important;
 }
 
-.searchbar .input{
-  position: relative;
-  width: 312px;
-  height: 48px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+header.sticky > #brand > .sub_title{
+  display: none;
 }
-.searchbar .input input{
-  position: absolute;
-  top: 0;
-  left:0;
-  width: 100%;
-  height: 100%;
+
+#searchbar .search-container{
+  padding-block: 4px;
+  float: left;
+}
+#searchbar input[type=text] {
+  padding: 6px;
+  font-size: 17px;
   border: none;
-  outline: none;
-  background-color: whitesmoke;
-  font-size: 16px;
+  width: 250px;
+}
+#searchbar .search-container button {
+  float: left;
+  padding: 6px 10px;
+  margin-left: 16px;
+  background: #ddd;
+  font-size: 17px;
+  border: none;
+  cursor: pointer;
+}
+#searchbar .search-container button:hover {
+  background: #ccc;
 }
 
 
@@ -189,6 +156,8 @@ header.container-fluid{
   padding: $s1;
   margin: 0 $s1;
 }
+
+
 #foot{
   background-color: #2d2d2d;
   color: $lgray-color;
@@ -216,10 +185,6 @@ header.container-fluid{
   }
   #authopt{
     order: 1;
-  }
-  #authopt > .nico{
-    display: block;
-    background-color: red;
   }
   #searchbar{
     order: 2;
