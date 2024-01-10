@@ -1,5 +1,5 @@
 <template>
-<aside id="sidebar" class="col-2 col-xl-3 col-lg-11 col-md-12">
+<aside id="sidebar" class="col-2 col-lg-11 col-xl-3 col-md-12">
     <div class="side-topic wrapper">
         <p class="side-title p1-hr">
             <b>آخرین مطالب</b>

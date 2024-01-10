@@ -63,18 +63,18 @@
 
 // Medium devices (tablets, less than 992px)
 @media only screen and (max-width: $lg) {
-    .col-lg-1{flex-basis: 8.333%;}
-    .col-lg-2{flex-basis: 16.666%;}
-    .col-lg-3{flex-basis: 24%;}
-    .col-lg-4{flex-basis: 33.333%;}
-    .col-lg-5{flex-basis: 41.666%;}
-    .col-lg-6{flex-basis: 50%;}
-    .col-lg-7{flex-basis: 58.333%;}
-    .col-lg-8{flex-basis: 66.666%;}
-    .col-lg-9{flex-basis: 75%;}
-    .col-lg-10{flex-basis: 83.333%;}
-    .col-lg-11{flex-basis: 91.666%;}
-    .col-lg-12{flex-basis: 100%;}
+    .col-lg-1{flex-basis: 8.333% !important;}
+    .col-lg-2{flex-basis: 16.666% !important;}
+    .col-lg-3{flex-basis: 24% !important;}
+    .col-lg-4{flex-basis: 33.333% !important;}
+    .col-lg-5{flex-basis: 41.666% !important;}
+    .col-lg-6{flex-basis: 50% !important;}
+    .col-lg-7{flex-basis: 58.333% !important;}
+    .col-lg-8{flex-basis: 66.666% !important;}
+    .col-lg-9{flex-basis: 75% !important;}
+    .col-lg-10{flex-basis: 83.333% !important;}
+    .col-lg-11{flex-basis: 91.666% !important;}
+    .col-lg-12{flex-basis: 100% !important;}
 
     // HIDE & SHOW
     .lg-hide{display: none;}
