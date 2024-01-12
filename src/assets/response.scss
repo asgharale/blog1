@@ -43,18 +43,18 @@
 
 // Small devices (landscape phones, less than 768px)
 @media only screen and (max-width: $md) {
-    .col-md-1{flex-basis: 8.333%!important;}
-    .col-md-2{flex-basis: 16.666%!important;}
-    .col-md-3{flex-basis: 24%!important;}
-    .col-md-4{flex-basis: 33.333%!important;}
-    .col-md-5{flex-basis: 41.666%!important;}
-    .col-md-6{flex-basis: 50%!important;}
-    .col-md-7{flex-basis: 58.333%!important;}
-    .col-md-8{flex-basis: 66.666%!important;}
-    .col-md-9{flex-basis: 75%!important;}
-    .col-md-10{flex-basis: 83.333%!important;}
-    .col-md-11{flex-basis: 91.666%!important;}
-    .col-md-12{flex-basis: 100%!important;}
+    .col-md-1{flex-basis: 8.333%;}
+    .col-md-2{flex-basis: 16.666%;}
+    .col-md-3{flex-basis: 24%;}
+    .col-md-4{flex-basis: 33.333%;}
+    .col-md-5{flex-basis: 41.666%;}
+    .col-md-6{flex-basis: 50%;}
+    .col-md-7{flex-basis: 58.333%;}
+    .col-md-8{flex-basis: 66.666%;}
+    .col-md-9{flex-basis: 75%;}
+    .col-md-10{flex-basis: 83.333%;}
+    .col-md-11{flex-basis: 91.666%;}
+    .col-md-12{flex-basis: 100%;}
 
     // HIDE & SHOW
     .md-hide{display: none;}
