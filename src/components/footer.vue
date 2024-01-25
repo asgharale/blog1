@@ -2,13 +2,14 @@
   <footer id="foot" class="p3">
     <div class="container-fluid cen-text">
       <!-- site data -->
-      <div style="background-color: pink;" class="col-3 col-lg-5 col-md-6 m1-vr">
-        <router-link to="/about">درباره</router-link>
+      <div class="col-3 col-lg-5 col-md-6 m1-vr" id="footer1">
+        <router-link class="dark-bgt-h" to="/about">درباره</router-link>
+        <router-link class="dark-bgt-h" to="/">صفحه اصلی</router-link>
       </div>
       <!-- site content -->
-      <div style="background-color: purple;" class="col-3 col-lg-5 col-md-6 m1-vr">2</div>
+      <div class="col-3 col-lg-5 col-md-6 m1-vr">EMAIL</div>
       <!-- picture and contact form -->
-      <div style="background-color: orange;" class="col-6 col-lg-12 m1-vr">3</div>
+      <div  class="col-6 col-lg-12 m1-vr">LOGOS</div>
     </div>
     <hr>
     <div class="container-fluid p2-vr">
@@ -31,6 +32,9 @@ export default{
   background-color: #2d2d2d;
   color: $lgray-color;
 }
+#foot > div.container-fluid{
+  align-items: stretch;
+}
 #with-love{
   color: $pri-color;
   line-height: 2rem;
@@ -40,7 +44,14 @@ export default{
   direction: ltr;
   line-height: 2rem;
 }
-
+#footer1 > a{
+  display: block;
+  padding: $s1 0;
+  transition: 70ms;
+}
+#footer1 > a:hover{
+  color: $lpri-color;
+}
 @media only screen and (max-width: $lg) {
     #with-love, .copy-r{
     text-align: center;

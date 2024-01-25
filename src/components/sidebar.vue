@@ -5,11 +5,21 @@
             <b>آخرین مطالب</b>
         </p>
         <div class="p1">
-            <a href="#">مقاله ۱</a><br>
-            <a href="#">مقاله ۲</a><br>
-            <a href="#">مقاله ۳</a><br>
-            <a href="#">مقاله ۴</a><br>
-            <a href="#">مقاله ۵</a>
+            <router-link :to="'/posts/'+article.link" v-for="article in latestArticles" :key="article.id">
+                {{ article.title }}
+                <br>
+            </router-link>
+        </div>
+    </div>
+    <div class="side-topic wrapper">
+        <p class="side-title p1-hr">
+            <b>دسته ها</b>
+        </p>
+        <div class="p1">
+            <router-link :to="'/categories/'+cats.link" v-for="cat in cats" :key="cat.id">
+                {{ cat.name }}
+                <br>
+            </router-link>
         </div>
     </div>
 </aside>
@@ -18,6 +28,18 @@
 <script>
 export default{
     name: 'side-bar',
+    mounted(){
+        this.$store.dispatch("fetchLatestArticles");
+        this.$store.dispatch("fetchCats");
+    },
+    computed:{
+        latestArticles(){
+            return this.$store.getters.getLatestArticles
+        },
+        cats(){
+            return this.$store.getters.getCats
+        }
+    }
 }
 </script>
 
@@ -46,7 +68,7 @@ export default{
     }
 }
 @media only screen and (max-width: $xl) and (min-width: $lg){
-    #sidebar > *, .side_topic{
+    #sidebar > *, .side-topic{
         margin-right: $s3!important;
     }
 }

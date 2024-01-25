@@ -9,7 +9,7 @@
       </div>
       <div id="brand" class="col-4 col-md-12">
         <router-link id="brand-title" to="/"><h1 class="p3-vr">وبلاگ1</h1></router-link>
-        <p class="sub_title">ساب تایتل وبسایت بلاگ1</p>
+        <p class="sub-title">ساب تایتل وبسایت بلاگ1</p>
      </div>
 
 
@@ -17,6 +17,11 @@
         <div class="search-container">
           <SearchBar/>
         </div>
+      </div>
+
+      <!-- STICK -->
+      <div id="sticked-header">
+        <h1>BLOG 1</h1>
       </div>
     </header>
 
@@ -39,10 +44,9 @@ export default{
     methods:{
       stickyNav(head){
         if(window.scrollY > head.children[1].offsetTop){
-          head.children[0].classList.add("sticky")
+          head.children[0].children[3].classList.add("stick")
         }else{
-          head.children[0].classList.remove("sticky")
-          console.log("top")
+          head.children[0].children[3].classList.remove("stick")
         }
       }
     },
@@ -66,9 +70,6 @@ export default{
   background-color: $lpri-color;
   transition: 0.4s;
 }
-#head > #navbar{
-  background-color: pink;
-}
 #head > header > *{
   vertical-align: middle;
 }
@@ -85,7 +86,7 @@ header.sticky{
   margin: 0!important;
 }
 
-header.sticky > #brand > .sub_title{
+header.sticky > #brand > .sub-title{
   display: none;
 }
 
@@ -108,5 +109,21 @@ header.sticky > #brand > .sub_title{
     order: 2;
   }
 
+}
+
+
+
+#sticked-header{
+  display: none;
+  visibility: hidden;
+  transition: 0.3s;
+}
+#sticked-header.stick{
+  display: block;
+  visibility: visible;
+  background-color: pink;
+  position: fixed;
+  top: 0;
+  width: 100%
 }
 </style>

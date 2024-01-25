@@ -1,13 +1,15 @@
 @import 'variables.scss';
 @import 'response.scss';
+@import 'listing.scss';
 
 body{
     background-color: whitesmoke;
 }
-body, p, h1, h2, h3, h4, h5, h6{
+body, p, h1, h2, h3, h4, h5, h6, a{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    text-decoration: none;
 }
 @font-face {
     font-family: "IranSans";
@@ -25,11 +27,24 @@ body, p, h1, h2, h3, h4, h5, h6{
 }
 
 
+// utils
 .cen-text{
     text-align: center;
 }
 .ltr-text{
     text-align: left;
+}
+.light-bgt-m{
+    color: black;
+}
+.dark-bgt-l{
+    color: white;
+}
+.dark-bgt-m{
+    color: whitesmoke;
+}
+.dark-bgt-h{
+    color: $lgray-color;
 }
 
 
